@@ -11,6 +11,7 @@ namespace ProgPoe3.Data
         {
         }
 
+
         public DbSet<Claim> Claims { get; set; }
         public DbSet<ApprovedClaim> ApprovedClaims { get; set; } // New DbSet for approved claims
     }
