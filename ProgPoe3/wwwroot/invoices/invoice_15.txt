@@ -1,0 +1,4 @@
+Invoice for Claim ID: 15
+Lecturer: Muhammad Rahim test 12
+Total Amount: R 60000.00
+Date: 10/19/2024 1:04:25 PM

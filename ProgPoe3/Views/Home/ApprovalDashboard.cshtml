@@ -1,0 +1,66 @@
+﻿@model List<Claim>
+
+<h2>Approval Dashboard</h2>
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Lecturer</th>
+                <th>Submission Date</th>
+                <th>Hours Worked</th>
+                <th>Total Amount</th>
+                <th>Document</th>
+                <th>Notes</th>
+                <th>Automated Checks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var claim in Model)
+            {
+                <tr>
+                    <td>@claim.Id</td>
+                    <td>@claim.LecturerName</td>
+                    <td>@claim.SubmissionDate.ToShortDateString()</td>
+                    <td>@claim.HoursWorked</td>
+                    <td>R @((claim.HoursWorked * claim.HourlyRate).ToString("F2"))</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(claim.SupportingDocumentName))
+                        {
+                            <a href="#" onclick="alert('Document: @claim.SupportingDocumentName');">@claim.SupportingDocumentName</a>
+                        }
+                    </td>
+                    <td>@claim.Notes</td>
+                    <td>
+                        @foreach (var check in claim.AutomatedChecks.Split(", "))
+                        {
+                            <div>
+                                @if (check.Contains("within the acceptable range"))
+                                {
+                                    <span class="text-success">@check</span>
+                                }
+                                else
+                                {
+                                    <span class="text-danger">@check</span>
+                                }
+                            </div>
+                        }
+                    </td>
+                    <td>
+                        <form asp-action="UpdateClaimStatus" method="post" style="display: inline;">
+                            <input type="hidden" name="claimId" value="@claim.Id" />
+                            <button type="submit" name="status" value="Approved" class="btn btn-success btn-sm">Approve</button>
+                            <button type="submit" name="status" value="Rejected" class="btn btn-danger btn-sm">Reject</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>There are no pending claims to approve.</p>
+}

@@ -1,0 +1,53 @@
+﻿@model List<Claim>
+
+<h2>Lecture Claims</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Lecturer Name</th>
+            <th>Submission Date</th>
+            <th>Hours Worked</th>
+            <th>Hourly Rate</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Document</th>
+            <th>Notes</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.Id</td>
+                <td>@claim.LecturerName</td>
+                <td>@claim.SubmissionDate.ToShortDateString()</td>
+                <td>@claim.HoursWorked</td>
+                <td>R @claim.HourlyRate.ToString("F2")</td>
+                <td>R @((claim.HoursWorked * claim.HourlyRate).ToString("F2"))</td>
+                <td>
+                    <span class="badge @(claim.Status == "Approved" ? "bg-success" :
+                                       claim.Status == "Rejected" ? "bg-danger" : "bg-warning") text-white">
+                        @claim.Status
+                    </span>
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(claim.SupportingDocumentName))
+                    {
+                        <a href="#" onclick="alert('Document: @claim.SupportingDocumentName');">@claim.SupportingDocumentName</a>
+                    }
+                </td>
+                <td>@claim.Notes</td>
+                <td>
+                    <a asp-action="EditClaim" asp-route-id="@claim.Id" class="btn btn-primary btn-sm">Edit</a>
+                    <form asp-action="RemoveClaim" method="post" style="display: inline;">
+                        <input type="hidden" name="id" value="@claim.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to remove this claim?');">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

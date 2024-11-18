@@ -1,0 +1,4 @@
+Invoice for Claim ID: 13
+Lecturer: Jacobs
+Total Amount: R 200.00
+Date: 10/19/2024 1:04:25 PM

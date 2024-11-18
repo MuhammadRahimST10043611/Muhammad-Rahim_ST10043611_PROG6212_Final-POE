@@ -1,0 +1,4 @@
+Invoice for Claim ID: 28
+Lecturer: Lecture 12
+Total Amount: R 5000.00
+Date: 11/18/2024 10:55:15 PM

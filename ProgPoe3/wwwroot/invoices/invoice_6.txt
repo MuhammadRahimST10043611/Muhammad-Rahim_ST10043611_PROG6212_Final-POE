@@ -1,0 +1,4 @@
+Invoice for Claim ID: 6
+Lecturer: helooooo
+Total Amount: R 1350.00
+Date: 10/19/2024 1:04:20 PM

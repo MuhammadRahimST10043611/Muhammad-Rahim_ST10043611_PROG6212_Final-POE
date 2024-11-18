@@ -1,0 +1,4 @@
+Invoice for Claim ID: 10
+Lecturer: Jacobs hammound the fourth
+Total Amount: R 20060.00
+Date: 10/19/2024 1:04:22 PM

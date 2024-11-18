@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="jumbotron text-center bg-light">
+    <h1 class="display-4">Contract Monthly Claim System (CMCS)</h1>
+    <p class="lead">Streamline your claim submission and approval process with our innovative solution.</p>
+    <hr class="my-4">
+    <p>Choose an action to get started:</p>
+
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <h5>Submit a New Claim</h5>
+            <p>Create and submit a new claim.</p>
+            <a class="btn btn-primary action-btn" href="@Url.Action("SubmitClaim", "Home")" role="button">Lecture Submit Claim</a>
+        </div>
+        <div class="col-md-3">
+            <h5>View Your Claims</h5>
+            <p>Review and manage claims.</p>
+            <a class="btn btn-success action-btn" href="@Url.Action("ViewClaims", "Home")" role="button">Lecture View Claims Dashboard</a>
+        </div>
+        <div class="col-md-3">
+            <h5>Approval Dashboard</h5>
+            <p>Review and approve pending claims.</p>
+            <a class="btn btn-info action-btn" href="@Url.Action("ApprovalDashboard", "Home")" role="button">Coordinators Approval Dashboard</a>
+        </div>
+        <div class="col-md-3">
+            <h5>HR Dashboard</h5>
+            <p>Generate invoices for claims.</p>
+            <a class="btn btn-info action-btn" href="@Url.Action("HRDashboard", "Home")" role="button">HR Dashboard</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-alt fa-2x text-primary mb-3"></i><br>Seamless Submissions</h5>
+                <p class="card-text">Effortlessly submit claims and upload supporting documents with our user-friendly interface.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-check-double fa-2x text-success mb-3"></i><br>Enhanced Accuracy</h5>
+                <p class="card-text">Reduce errors and increase accuracy with our comprehensive claim management platform.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-chart-line fa-2x text-info mb-3"></i><br>Efficiency Boost</h5>
+                <p class="card-text">Streamline your workflow and boost productivity with our innovative approach to claim processing.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <h2>About CMCS</h2>
+        <p>The Contract Monthly Claim System (CMCS) is designed to revolutionize the often-complex process of submitting and approving monthly claims for Independent Contractor (IC) lecturers. Our mission is to enhance both user experience and administrative efficiency through innovative .NET GUI development and C# programming.</p>
+    </div>
+    <div class="col-md-6">
+        <h2>Key Benefits</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><i class="fas fa-clock text-primary"></i> Time-saving claim submission process</li>
+            <li class="list-group-item"><i class="fas fa-shield-alt text-success"></i> Improved accuracy and data integrity</li>
+            <li class="list-group-item"><i class="fas fa-tasks text-info"></i> Streamlined approval workflow</li>
+            <li class="list-group-item"><i class="fas fa-chart-pie text-warning"></i> Comprehensive reporting and analytics</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+Invoice for Claim ID: 24
+Lecturer: Muhammad Rahim
+Total Amount: R 720.00
+Date: 11/18/2024 10:55:18 PM

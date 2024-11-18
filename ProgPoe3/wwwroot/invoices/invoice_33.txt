@@ -1,0 +1,4 @@
+Invoice for Claim ID: 33
+Lecturer: Test for web
+Total Amount: R 15452.40
+Date: 11/18/2024 10:55:13 PM

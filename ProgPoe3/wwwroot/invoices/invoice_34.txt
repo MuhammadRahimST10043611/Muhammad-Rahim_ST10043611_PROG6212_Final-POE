@@ -1,0 +1,4 @@
+Invoice for Claim ID: 34
+Lecturer: Test for web 5
+Total Amount: R 30000.00
+Date: 11/18/2024 10:54:47 PM

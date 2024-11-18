@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #3498db; /* Light blue color for primary elements */
+    --secondary-color: #2c3e50; /* Darker blue for secondary elements */
+    --success-color: #2ecc71; /* Green for success indicators */
+    --danger-color: #e74c3c; /* Red for danger/warning indicators */
+    --warning-color: #f39c12; /* Yellow for warnings */
+    --light-gray: #ecf0f1; /* Light gray for background */
+    --dark-gray: #34495e; /* Dark gray for text */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets default font */
+    line-height: 1.6; /* Improves readability with line spacing */
+    color: var(--dark-gray); /* Text color set to dark gray */
+    background-color: var(--light-gray); /* Light gray background for the body */
+}
+
+.navbar {
+    background-color: white; /* White navigation bar */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Light shadow effect */
+}
+
+.navbar-brand img {
+    max-height: 40px; /* Limits logo height in the navbar */
+}
+
+.nav-link {
+    font-weight: 500; /* Bold font weight for navigation links */
+}
+
+.container {
+    background-color: white; /* White background for containers */
+    border-radius: 8px; /* Rounded corners for containers */
+    box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Subtle shadow for depth */
+    padding: 2rem; /* 2rem padding inside containers */
+    margin-top: 2rem; /* 2rem space above container */
+    margin-bottom: 2rem; /* 2rem space below container */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-color); /* Headers are secondary color */
+    margin-bottom: 1rem; /* Adds spacing below headers */
+}
+
+.btn-primary {
+    background-color: var(--primary-color); /* Primary button color */
+    border-color: var(--primary-color); /* Matching border color */
+}
+
+.btn-success {
+    background-color: var(--success-color); /* Success button color */
+    border-color: var(--success-color); /* Matching border color */
+}
+
+.btn-danger {
+    background-color: var(--danger-color); /* Danger button color */
+    border-color: var(--danger-color); /* Matching border color */
+}
+
+.table {
+    box-shadow: 0 2px 4px rgba(0,0,0,.05); /* Slight shadow for tables */
+}
+
+    .table thead th {
+        background-color: var(--secondary-color); /* Secondary color for table headers */
+        color: white; /* White text for table headers */
+        border-color: var(--secondary-color); /* Border matches the header background */
+    }
+
+.badge {
+    font-weight: 500; /* Bold font for badges */
+    padding: .5em .75em; /* Padding inside badges */
+}
+
+.form-control:focus {
+    border-color: var(--primary-color); /* Primary color for focused form inputs */
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25); /* Light blue shadow for focused inputs */
+}
+
+.card {
+    border: none; /* Removes card border */
+    box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Adds shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+    .card:hover {
+        transform: translateY(-5px); /* Lifts card slightly on hover */
+        box-shadow: 0 6px 12px rgba(0,0,0,.15); /* Increases shadow on hover */
+    }
+
+footer {
+    background-color: var(--secondary-color); /* Secondary color for footer background */
+    color: white; /* White text for footer */
+    padding: 1rem 0; /* Padding inside footer */
+    margin-top: 2rem; /* Space above footer */
+}
+
+.table .btn {
+    margin-right: 5px; /* Space between buttons in tables */
+    margin-bottom: 5px; /* Space below buttons in tables */
+}
+
+.table td form {
+    display: inline-block; /* Keeps form elements inline inside table */
+}
+
+/* Ensuring buttons have uniform width and height */
+.action-btn {
+    display: block;
+    width: 100%; /* Full width of the container */
+    height: 50px; /* Set a consistent height */
+    font-size: 1rem; /* Uniform font size */
+    padding: 10px 0; /* Padding for balanced appearance */
+    text-align: center; /* Center text */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+}
+
+.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

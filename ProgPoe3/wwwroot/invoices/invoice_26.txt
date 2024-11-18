@@ -1,0 +1,4 @@
+Invoice for Claim ID: 26
+Lecturer: Muhammad Rahim Test 100
+Total Amount: R 1160.00
+Date: 10/19/2024 1:04:13 PM

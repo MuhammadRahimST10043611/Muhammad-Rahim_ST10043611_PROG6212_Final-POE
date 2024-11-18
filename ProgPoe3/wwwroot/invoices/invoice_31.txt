@@ -1,0 +1,4 @@
+Invoice for Claim ID: 31
+Lecturer: Aneesah Rahim
+Total Amount: R 6000.00
+Date: 11/18/2024 10:08:40 PM

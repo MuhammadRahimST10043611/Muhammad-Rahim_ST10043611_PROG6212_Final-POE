@@ -1,0 +1,4 @@
+Invoice for Claim ID: 11
+Lecturer: heloo five
+Total Amount: R 360.00
+Date: 10/19/2024 1:04:23 PM

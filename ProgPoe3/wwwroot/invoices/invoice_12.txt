@@ -1,0 +1,4 @@
+Invoice for Claim ID: 12
+Lecturer: Jacobs
+Total Amount: R 3600.00
+Date: 10/19/2024 1:04:24 PM

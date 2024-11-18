@@ -1,0 +1,41 @@
+﻿@model List<Claim>
+
+<h2>HR Dashboard</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Lecturer Name</th>
+            <th>Submission Date</th>
+            <th>Hours Worked</th>
+            <th>Hourly Rate</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var claim in Model)
+        {
+            <tr>
+                <td>@claim.Id</td>
+                <td>@claim.LecturerName</td>
+                <td>@claim.SubmissionDate.ToShortDateString()</td>
+                <td>@claim.HoursWorked</td>
+                <td>R @claim.HourlyRate.ToString("F2")</td>
+                <td>R @((claim.HoursWorked * claim.HourlyRate).ToString("F2"))</td>
+                <td>@claim.Status</td>
+                <td>
+                    @if (claim.Status == "Approved")
+                    {
+                        <form asp-action="GenerateInvoice" method="post">
+                            <input type="hidden" name="claimId" value="@claim.Id" />
+                            <button type="submit" class="btn btn-primary btn-sm">Generate Invoice</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
