@@ -9,5 +9,6 @@
     public string? SupportingDocumentName { get; set; }
     public DateTime SubmissionDate { get; set; } = DateTime.Now;
     public string? AutomatedChecks { get; set; } // New property
+
 }
 

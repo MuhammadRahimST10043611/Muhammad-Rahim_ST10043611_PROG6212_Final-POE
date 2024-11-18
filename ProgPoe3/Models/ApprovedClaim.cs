@@ -8,4 +8,5 @@
     public string? SupportingDocumentName { get; set; }
     public DateTime SubmissionDate { get; set; }
     public DateTime ApprovalDate { get; set; } = DateTime.Now;
+
 }
