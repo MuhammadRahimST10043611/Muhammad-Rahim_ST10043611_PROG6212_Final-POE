@@ -11,6 +11,7 @@ namespace ProgPoe3.Controllers
     {
         private readonly ClaimDbContext _context;
 
+
         public HomeController(ClaimDbContext context)
         {
             _context = context;
