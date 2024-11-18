@@ -15,6 +15,7 @@ namespace ProgPoe3.Controllers
             _context = context;
         }
 
+
         [HttpGet]
         public IActionResult GetAllClaims()
         {
